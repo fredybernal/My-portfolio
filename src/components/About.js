@@ -2,7 +2,7 @@ import { Card, CardActions, CardContent, Button, CardMedia, makeStyles, Typograp
 import React from 'react'
 import portada from "../images/portada.jpeg"
 import TypeWriterEffect from "react-typewriter-effect"
-import pdf from "../images/Datos.pdf"
+import pdf from "../images/curriculum.pdf"
 
 
 const About = ({ title, dark, id }) => {
@@ -77,6 +77,9 @@ const useStyles = makeStyles((theme) => ({
         objectFit: "cover",
         borderRadius: "10px",
         margin: theme.spacing(5),
+        [theme.breakpoints.down("sm")]:{
+            width: 3000
+        },
     },
     cardcontent:{
         marginTop: theme.spacing(2),
@@ -84,7 +87,8 @@ const useStyles = makeStyles((theme) => ({
             color:"#000",
             marginTop:theme.spacing(6),
             [theme.breakpoints.down("sm")]:{
-                display:"none"
+                display:"none",
+                
             },
         },
     },
